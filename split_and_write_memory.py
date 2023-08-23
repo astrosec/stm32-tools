@@ -9,6 +9,11 @@ import shlex
 #chunk to the STM32 using the ST-LINK CLI tool.
 #If the write fails it will keep trying every two seconds
 
+#STM32 is little endian
+#3|3|2|2|2|2|2|2|2|2|2|2|1|1|1|1|1|1|1|1|1|1|
+#1|0|9|8|7|6|5|4|3|2|1|0|9|8|7|6|5|4|3|2|1|0|9|8|7|6|5|4|3|2|1|0
+#0 0 0 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0
+
 #This tool is handy if you have some oddly behaving devices that
 #have spurious failures when using the GUI ST LINK tools to write
 #new firmware images
