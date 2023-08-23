@@ -12,7 +12,11 @@ import shlex
 #STM32 is little endian
 #3|3|2|2|2|2|2|2|2|2|2|2|1|1|1|1|1|1|1|1|1|1|
 #1|0|9|8|7|6|5|4|3|2|1|0|9|8|7|6|5|4|3|2|1|0|9|8|7|6|5|4|3|2|1|0
-#0 0 0 1 1 0 0 1 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0
+#0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#Debug Exception and Monitor Control Register (CoreDebug->DEMCR,
+#0xE000EDFC), set to 0x1000000 (bit 24) hex to enable Trace system 
+#enable; to use DWT, ETM, ITM and TPIU 
+
 
 #This tool is handy if you have some oddly behaving devices that
 #have spurious failures when using the GUI ST LINK tools to write
